@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MacroWire – Live Macro Newsfeed</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --mw-accent:#c71f24; --mw-border:#e5e5e5; }
+    body{font-family:"Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+    h1,h2,h3,.font-serif{font-family:"Merriweather",Georgia,serif}
+    .mw-divider{border-bottom:1px solid var(--mw-border)}
+    .mw-accent{color:var(--mw-accent)}
+    .logo:hover{color:var(--mw-accent)}
+  </style>
+</head>
+<body class="bg-gray-950 text-gray-100 min-h-screen flex flex-col">
+<header class="flex items-center justify-between px-6 py-4 bg-gray-900 shadow mw-divider">
+  <a href="#" class="logo flex items-baseline gap-1 select-none">
+    <span class="font-serif text-2xl">Macro</span><span class="font-bold text-2xl mw-accent">Wire</span>
+  </a>
+  <div class="flex items-center gap-4">
+    <input type="text" placeholder="Search…" class="px-3 py-1 rounded-md bg-gray-800 text-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--mw-accent)]">
+    <button class="w-8 h-8 flex items-center justify-center rounded-md bg-gray-800 hover:bg-gray-700" title="Toggle dark mode">🌗</button>
+  </div>
+</header>
+<main class="flex-1 flex overflow-hidden">
+  <aside class="w-64 bg-gray-900 p-5 overflow-y-auto hidden lg:block mw-divider lg:border-r border-gray-800">
+    <h2 class="font-serif text-xl font-bold mb-4">Market Snapshots</h2>
+    <div class="space-y-4 text-sm">
+      <div class="p-3 rounded-lg bg-gray-800 mw-divider"><p class="font-medium">Oil (WTI)</p><p>$85.90 <span class="text-green-400">▲ 2.0 %</span></p></div>
+      <div class="p-3 rounded-lg bg-gray-800 mw-divider"><p class="font-medium">USD/CAD</p><p>1.3520 <span class="text-red-400">▼ 0.2 %</span></p></div>
+      <div class="p-3 rounded-lg bg-gray-800 mw-divider"><p class="font-medium">10‑yr UST</p><p>4.34 % <span class="text-gray-400">—</span></p></div>
+      <div class="p-3 rounded-lg bg-gray-800"><p class="font-medium">VIX</p><p>14.2 <span class="text-red-400">▼ 0.5</span></p></div>
+    </div>
+  </aside>
+
+  <section class="flex-1 overflow-y-auto p-6 space-y-8">
+    <h2 class="font-serif text-xl font-bold mw-divider pb-2">Live Headlines</h2>
+    <article class="rounded-lg bg-gray-900 shadow space-y-5 p-6 border border-gray-800">
+      <header class="flex items-center justify-between text-sm flex-wrap gap-2">
+        <div class="flex items-center gap-2"><span class="px-2 py-0.5 rounded bg-[var(--mw-accent)] text-white text-xs">Policy</span><h3 class="font-serif font-semibold text-lg">Fed hints at rate pause</h3></div>
+        <time class="text-gray-400">07:34 MT</time>
+      </header>
+
+      <section class="text-sm text-gray-300">
+        <h4 class="uppercase text-xs text-gray-400 mb-1 tracking-wide">Event Rundown</h4>
+        <p>The Fed signalled it’s comfortable leaving rates unchanged through summer, citing cooler labour data. Traders dropped two rate‑hike bets within minutes and the 2‑year yield slipped 6 bp.</p>
+      </section>
+
+      <section class="text-sm grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div class="bg-gray-800 p-3 rounded"><p class="text-xs text-gray-400">2‑yr Yield</p><p class="font-medium">4.55 % <span class="text-green-400">▼ 6 bp</span></p></div>
+        <div class="bg-gray-800 p-3 rounded"><p class="text-xs text-gray-400">10‑yr Yield</p><p class="font-medium">4.34 % <span class="text-green-400">▼ 2 bp</span></p></div>
+        <div class="bg-gray-800 p-3 rounded"><p class="text-xs text-gray-400">USD/CAD</p><p class="font-medium">1.3520 <span class="text-red-400">▼ 0.2 %</span></p></div>
+        <div class="bg-gray-800 p-3 rounded"><p class="text-xs text-gray-400">S&P Futures</p><p class="font-medium">5 202 <span class="text-green-400">▲ 0.3 %</span></p></div>
+      </section>
+
+      <div class="grid md:grid-cols-3 gap-6 text-sm">
+        <div><p class="uppercase text-xs text-gray-400 mb-1">0‑5 days</p><ul class="list-disc list-inside space-y-1"><li>Expect further <span class="text-green-400 font-semibold">bull‑steepening</span> if 2‑yr drops under 4.50 %.</li><li>Fade USD/CAD rallies above 1.3550 with tight 1.3585 stop.</li></ul></div>
+        <div><p class="uppercase text-xs text-gray-400 mb-1">1‑3 months</p><ul class="list-disc list-inside space-y-1"><li>Keep equity tilt <span class="font-semibold">neutral</span>; add to quality‑growth tech on dips.</li><li>Maintain CAD hedge in 1.34–1.36 band.</li></ul></div>
+        <div><p class="uppercase text-xs text-gray-400 mb-1">6‑12 months</p><ul class="list-disc list-inside space-y-1"><li>Base‑case one cut in Q4 → 10‑yr grind toward 3.8 %.</li><li>Overweight dividend‑heavy TSX utilities.</li></ul></div>
+      </div>
+
+      <footer class="flex items-center gap-3 text-xs text-gray-400 pt-3 mw-divider">
+        <button class="px-2 py-0.5 rounded bg-gray-800 hover:bg-gray-700">👍 24</button>
+        <button class="px-2 py-0.5 rounded bg-gray-800 hover:bg-gray-700">👎 3</button>
+        <a href="#" class="ml-auto underline mw-accent hover:opacity-80">Read full analysis →</a>
+      </footer>
+    </article>
+  </section>
+
+  <aside class="w-72 bg-gray-900 p-5 overflow-y-auto hidden xl:block mw-divider xl:border-l border-gray-800">
+    <h2 class="font-serif text-xl font-bold mb-4">Deep Dives</h2>
+    <ul class="space-y-3 text-sm">
+      <li><a href="#" class="hover:underline">US CPI Breakdown – 6 min read</a></li>
+      <li><a href="#" class="hover:underline">BoC Rate Decision – 5 min read</a></li>
+      <li><a href="#" class="hover:underline">OPEC Output Cut – 4 min read</a></li>
+      <li><a href="#" class="hover:underline">China Credit Pulse – 7 min read</a></li>
+    </ul>
+  </aside>
+</main>
+<footer class="bg-gray-900 text-xs text-gray-500 text-center py-3">© 2025 MacroWire | Information only – not investment advice</footer>
+</body>
+</html>
